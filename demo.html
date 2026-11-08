@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Проверка сайта — демо</title>
+<meta name="description" content="Отчёт о сайте простыми словами: выберите пример или вставьте исходный код страницы.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Проверка сайта</h1>
+  <p class="lead">Объясняю простыми словами, что мешает клиентам и поисковикам и что исправить в первую очередь.</p>
+  <p class="partial">В браузере страница не может сама скачать чужой сайт, поэтому здесь проверяются вымышленные примеры или исходный код, который вы вставите. Проверку по адресу делает <a href="https://github.com/chop-prog/site-check">версия с локальным сервером</a>.</p>
+  <div class="chips" id="samples" role="group" aria-label="Примеры"></div>
+  <details class="paste">
+    <summary>Вставить свой HTML</summary>
+    <form id="form">
+      <label class="sr" for="html">Исходный код страницы</label>
+      <textarea id="html" rows="7" placeholder="&lt;html&gt;…"></textarea>
+      <button type="submit">Проверить</button>
+    </form>
+  </details>
+  <p id="status" class="status" role="status"></p>
+
+  <section id="result" hidden>
+    <p class="site" id="site"></p>
+    <div id="facts" class="scores"></div>
+    <p id="partial" class="partial" hidden>Страница собирается скриптами, поэтому содержимое проверено не полностью.</p>
+    <h2>Что исправить в первую очередь</h2>
+    <p id="clean" class="clean" hidden>Серьёзных проблем автоматическая проверка не нашла.</p>
+    <ol id="problems" class="problems"></ol>
+    <h2>Сообщение владельцу</h2>
+    <textarea id="message" rows="9" aria-label="Текст сообщения владельцу"></textarea>
+  </section>
+
+  <footer>Сделал <a href="https://chop-prog.github.io">chop-prog</a> вместе с Claude Code · <a href="https://github.com/chop-prog/site-check">Исходный код и тесты</a></footer>
+</main>
+<script type="module" src="src/demo.js"></script>
+</body>
+</html>

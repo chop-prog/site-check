@@ -23,6 +23,14 @@ button:disabled { opacity: .55; cursor: wait; }
 .fact b { font-size: 24px; line-height: 1.2; }
 .fact .word { color: var(--text); font-size: 14px; }
 .partial { margin: 14px 0 0; color: var(--mid); }
+.partial a { color: inherit; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.chip { border: 1px solid var(--line); background: var(--panel); color: var(--text); font-weight: 500; }
+.chip[aria-pressed="true"] { border-color: var(--good); color: var(--good); }
+.paste { margin-top: 16px; color: var(--muted); }
+.paste summary { cursor: pointer; }
+.paste form { display: block; margin-top: 10px; }
+.paste button { margin-top: 8px; }
 .problems { margin: 0; padding: 0; list-style: none; counter-reset: p; }
 .problems li { position: relative; padding: 14px 0 14px 44px; border-bottom: 1px solid var(--line); counter-increment: p; }
 .problems li::before { content: counter(p); position: absolute; left: 0; top: 14px; display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid var(--line); border-radius: 50%; font: 500 14px ui-monospace, Consolas, monospace; }
