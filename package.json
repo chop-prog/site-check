@@ -1,0 +1,10 @@
+{
+  "name": "site-check",
+  "version": "1.0.0",
+  "description": "Checks a website on a phone and explains the problems to its owner in plain words.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "scripts": { "test": "node --test" },
+  "engines": { "node": ">=22" }
+}

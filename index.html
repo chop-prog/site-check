@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Проверка сайта</title>
+<meta name="description" content="Проверка сайта за минуту: понятный отчёт для владельца бизнеса, что исправить в первую очередь.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2307080d'/%3E%3Cpath d='M9 17l5 5 9-12' fill='none' stroke='%237cf5d0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Проверка сайта</h1>
+  <p class="lead">Открываю сайт как посетитель и объясняю простыми словами, что мешает клиентам и поисковикам и что исправить в первую очередь.</p>
+  <form id="form" novalidate>
+    <label class="sr" for="url">Адрес сайта</label>
+    <input id="url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="example.ru">
+    <button type="submit">Проверить</button>
+  </form>
+  <p id="status" class="status" role="status"></p>
+
+  <section id="result" hidden>
+    <p class="site" id="site"></p>
+    <div id="facts" class="scores"></div>
+    <p id="partial" class="partial" hidden>Страница собирается скриптами, поэтому содержимое проверено не полностью.</p>
+    <h2>Что исправить в первую очередь</h2>
+    <p id="clean" class="clean" hidden>Серьёзных проблем автоматическая проверка не нашла.</p>
+    <ol id="problems" class="problems"></ol>
+    <h2>Сообщение владельцу</h2>
+    <textarea id="message" rows="9" aria-label="Текст сообщения владельцу"></textarea>
+    <p class="actions"><button type="button" id="copy">Скопировать</button> <span id="copied" class="muted" role="status"></span></p>
+  </section>
+
+  <footer>Проверяется только главная страница и её исходный код. Сделал <a href="https://chop-prog.github.io">chop-prog</a> вместе с Claude Code · <a href="https://github.com/chop-prog/site-check">Исходный код и тесты</a></footer>
+</main>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
